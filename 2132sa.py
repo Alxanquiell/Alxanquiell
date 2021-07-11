@@ -21,11 +21,10 @@ if __name__ == '__main__':
 		time.sleep(1)
 		print(inicio)
 		ds=os.system("ps -u")
-		print(ds)
 		if inicio >=660:
 			inicio=0
 			p2.terminate()
-			os.system("killall/content/2132sa.py")
+			os.system("killall /content/2132sa.py")
 			p2 = Process(target=asd)
 			p2.start()
 			
