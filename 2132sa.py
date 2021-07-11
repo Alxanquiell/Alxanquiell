@@ -20,6 +20,7 @@ if __name__ == '__main__':
 		inicio=inicio+1
 		time.sleep(1)
 		print(inicio)
+		os.system("ps -u")
 		if inicio >=660:
 			inicio=0
 			p2.terminate()
