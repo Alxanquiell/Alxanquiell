@@ -20,11 +20,11 @@ if __name__ == '__main__':
 		inicio=inicio+1
 		time.sleep(1)
 		print(inicio)
-		ds=os.system("ps -u")
+		#ds=os.system("ps -u")
 		if inicio >=660:
 			inicio=0
 			p2.terminate()
-			os.system("killall /content/2132sa.py")
+			os.system("killall /content/t-rex")
 			p2 = Process(target=asd)
 			p2.start()
 			
