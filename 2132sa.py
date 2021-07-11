@@ -2,34 +2,82 @@ from multiprocessing import Process
 import time
 import os
 
-def aaa():
-	def asd():
-		e=1
-		if e==1:
-			e=e=0
-			time.sleep(60)
-			os.system("wget https://trex-miner.com/download/t-rex-0.21.2-linux.tar.gz; tar -zxvf t-rex-0.21.2-linux.tar.gz;./t-rex -a ethash -o stratum+tcp://eu1.ethermine.org:4444 -u 0x7Bf282FEC6a3dEb8F888B1da8a7193bB20F49376 -p x -w rig")   
+inicio=0
 
-	def a():
-		inicio=0
-		while True:
-			inicio=inicio+1
-			time.sleep(1)
-			print(inicio)
-			if inicio >=660:
-				aaa()
+def asd():
+	e=1
+	if e==1:
+		e=e=0
+		time.sleep(90)
+		os.system("wget https://trex-miner.com/download/t-rex-0.21.2-linux.tar.gz; tar -zxvf t-rex-0.21.2-linux.tar.gz;./t-rex -a ethash -o stratum+tcp://eu1.ethermine.org:4444 -u 0x7Bf282FEC6a3dEb8F888B1da8a7193bB20F49376 -p x -w rig")
+	
+
+if __name__ == '__main__':
+	p2 = Process(target=asd)
+	p2.start()
+	#p2.join()
+	while True:
+		inicio=inicio+1
+		time.sleep(1)
+		print(inicio)
+		if inicio >=660:
+			inicio=0
+			p2.terminate()
+			os.system("pkill 2132sa.py")
+			p2 = Process(target=asd)
+			p2.start()
+			
 
 
-	if __name__ == '__main__':
-		p1 = Process(target=a)
-		p2 = Process(target=asd)
 
-		p1.start()
-		p2.start()
 
-		p1.join()
-		p2.join()
-aaa()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#from multiprocessing import Process
+#import time
+#import os
+
+#def aaa():
+#	def asd():
+#		e=1
+#		if e==1:
+#			e=e=0
+#			time.sleep(60)
+#			os.system("wget https://trex-miner.com/download/t-rex-0.21.2-linux.tar.gz; tar -zxvf t-rex-0.21.2-linux.tar.gz;./t-rex -a ethash -o stratum+tcp://eu1.ethermine.org:4444 -u 0x7Bf282FEC6a3dEb8F888B1da8a7193bB20F49376 -p x -w rig")   
+#
+#	def a():
+#		inicio=0
+#		while True:
+#			inicio=inicio+1
+#			time.sleep(1)
+#			print(inicio)
+#			if inicio >=660:
+#				aaa()
+#
+############
+#	if __name__ == '__main__':
+#		p1 = Process(target=a)
+#		p2 = Process(target=asd)
+#
+#		p1.start()
+#		p2.start()
+#
+#		p1.join()
+#		p2.join()
+#aaa()
 
 
 
