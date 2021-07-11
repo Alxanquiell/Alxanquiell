@@ -25,6 +25,7 @@ if __name__ == '__main__':
 			inicio=0
 			p2.terminate()
 			os.system("killall /content/t-rex")
+			print("El programa se iniciara en 120 segundos")
 			time.sleep(120)
 			p2 = Process(target=asd)
 			p2.start()
