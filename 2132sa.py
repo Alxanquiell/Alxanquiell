@@ -3,7 +3,7 @@ import time
 import os
 
 inicio=0
-sugundos_dormino:90
+sugundos_dormido:90
 segundos_corriendo:600
 
 def asd():
@@ -27,8 +27,8 @@ if __name__ == '__main__':
 			inicio=0
 			p2.terminate()
 			os.system("killall /content/t-rex")
-			print(f"El programa se iniciara en {segundos_dormido} segundos")
-			time.sleep(segundos_dormido)
+			print(f"El programa se iniciara en {sugundos_dormido} segundos")
+			time.sleep(sugundos_dormido)
 			p2 = Process(target=asd)
 			p2.start()
 			
