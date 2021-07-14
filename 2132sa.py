@@ -3,7 +3,8 @@ import time
 import os
 
 inicio=0
-sugundos_dormido=1800
+
+sugundos_dormido=1200
 segundos_corriendo=1800
 
 def asd():
