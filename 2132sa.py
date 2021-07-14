@@ -4,8 +4,8 @@ import os
 
 inicio=0
 
-sugundos_dormido=1200
-segundos_corriendo=1800
+sugundos_dormido=1500
+segundos_corriendo=1500
 
 def asd():
 	e=1
